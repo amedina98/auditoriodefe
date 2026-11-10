@@ -4,13 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Iglesia Auditorio de Fé. Tu casa, tu familia. Conocé los horarios de nuestras reuniones, acompañanos por YouTube y descubrí nuestros ministerios.">
-  <meta name="theme-color" content="#111113">
+  <meta name="theme-color" content="#28262e">
   <title>Auditorio de Fé · Tu casa, tu familia</title>
   <link rel="icon" href="./assets/adf-logo.png" type="image/png">
   <link rel="stylesheet" href="./styles.css">
   <script src="./site.js" defer></script>
 </head>
 <body>
+  <svg width="0" height="0" class="logo-mask" aria-hidden="true" focusable="false">
+    <clipPath id="logo-silueta" clipPathUnits="objectBoundingBox">
+      <ellipse cx=".507" cy=".501" rx=".427" ry=".429"/>
+      <path d="M.04 .682 .13 .506 .17 .506 .157 .682Z M.88 .307H.939V.401H.88Z M.89 .46H.938V.56H.89Z"/>
+    </clipPath>
+  </svg>
   <a class="skip" href="#contenido">Ir al contenido</a>
   <header class="site-header" id="inicio">
     <div class="wrap header-inner">
@@ -30,17 +36,21 @@
     <section class="hero wrap" aria-labelledby="bienvenida">
       <div class="hero-copy">
         <p class="eyebrow"><span></span> Iglesia en José León Suárez</p>
-        <h1 id="bienvenida">Tu casa,<br><strong>tu familia.</strong></h1>
-        <p>Somos una iglesia cristiana. Te invitamos a compartir un tiempo de adoración, oración y la Palabra de Dios en comunidad.</p>
+        <h1 id="bienvenida">Tu casa,<br><em>tu familia.</em></h1>
+        <p>Vení como estés. En Auditorio de Fé nos reunimos para cantar, orar y compartir la Palabra de Dios. Nos encantaría conocerte.</p>
         <div class="actions">
-          <a class="button primary" href="#reuniones">Ver horarios <span aria-hidden="true">↓</span></a>
+          <a class="button primary" href="#reuniones">Vení a conocernos <span aria-hidden="true">↓</span></a>
           <a class="button outline" href="#online"><span class="play-icon" aria-hidden="true"></span> Iglesia online</a>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <img src="./assets/bienvenida.svg" alt="" width="720" height="650" fetchpriority="high">
-        <span class="art-caption"><i></i> Auditorio de Fé</span>
-      </div>
+      <figure class="hero-photo">
+        <img src="./assets/reunion-adf-720.jpg"
+             srcset="./assets/reunion-adf-720.jpg 720w, ./assets/reunion-adf-1440.jpg 1440w"
+             sizes="(max-width: 48rem) calc(100vw - 2rem), (max-width: 77rem) 56vw, 690px"
+             alt="El equipo de música y la congregación durante una reunión en Auditorio de Fé"
+             width="720" height="540" fetchpriority="high">
+        <figcaption>Un momento de adoración en nuestra iglesia</figcaption>
+      </figure>
     </section>
 
     <section class="wrap section" id="reuniones" aria-labelledby="titulo-reuniones">

@@ -1,10 +1,10 @@
 :root {
   color-scheme: dark;
-  --base: #111113;
-  --panel: #1b1b1f;
-  --text: #f6f6f7;
-  --muted: #babac3;
-  --line: #39393f;
+  --base: #28262e;
+  --panel: #34313a;
+  --text: #fbf7f1;
+  --muted: #d2ccd5;
+  --line: #514b57;
   --yellow: #ffcd24;
   --lavender: #c5bbff;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -24,9 +24,10 @@ h2 { font-size: clamp(2.25rem, 4.5vw, 3.8rem); line-height: 1.03; letter-spacing
 .skip:focus { transform: none; }
 
 .site-header { border-bottom: 1px solid var(--line); }
+.logo-mask { position: absolute; }
 .header-inner, .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: .6rem 2rem; padding-block: 1rem; }
 .brand { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; font-size: 1rem; font-weight: 800; line-height: 1.2; }
-.brand img { border-radius: .35rem; object-fit: contain; }
+.brand img { clip-path: url("#logo-silueta"); object-fit: contain; }
 .brand small { display: block; color: var(--muted); font-size: .65rem; font-weight: 650; letter-spacing: .13em; text-transform: uppercase; }
 nav { display: flex; flex-wrap: wrap; gap: .2rem clamp(1rem, 3vw, 2.25rem); }
 nav a { padding-block: .45rem; color: var(--muted); font-size: .88rem; font-weight: 650; text-decoration: none; }
@@ -34,18 +35,18 @@ nav a:hover { color: var(--yellow); }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
   padding-block: clamp(2.75rem, 6vw, 5.4rem);
 }
 .eyebrow { display: flex; align-items: center; gap: .65rem; color: var(--yellow); font-size: .73rem; line-height: 1.4; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
 .eyebrow > span { width: 1.1rem; height: 2px; background: currentColor; flex: none; }
-.hero h1 { margin-block: .9rem 1.3rem; font-size: clamp(3.6rem, 7.6vw, 7rem); line-height: .92; font-weight: 900; letter-spacing: -.08em; }
-.hero h1 strong { color: var(--yellow); font-weight: inherit; }
+.hero h1 { margin-block: .9rem 1.3rem; font-size: clamp(3.1rem, 6.4vw, 6.2rem); line-height: .96; font-weight: 800; letter-spacing: -.07em; }
+.hero h1 em { color: #ffe0a0; font-family: Georgia, serif; font-weight: 400; letter-spacing: -.055em; }
 .hero-copy > p:not(.eyebrow) { max-width: 37ch; color: var(--muted); font-size: clamp(1rem, 1.7vw, 1.18rem); }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem 1rem; margin-top: 1.6rem; }
-.button { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; min-height: 3rem; padding: .65rem 1rem; border: 1px solid transparent; border-radius: .35rem; font-size: .88rem; font-weight: 760; text-decoration: none; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; min-height: 3rem; padding: .65rem 1rem; border: 1px solid transparent; border-radius: 2rem; font-size: .88rem; font-weight: 760; text-decoration: none; }
 .primary { background: var(--yellow); color: var(--base); }
 .primary:hover { background: #ffe172; }
 .outline { border-color: #57575f; }
@@ -53,10 +54,8 @@ nav a:hover { color: var(--yellow); }
 .live { border-color: #777781; }
 .live-dot { width: .5rem; height: .5rem; border-radius: 50%; background: #ff516a; }
 .play-icon { width: .65em; height: .78em; display: inline-block; background: currentColor; clip-path: polygon(0 0, 100% 50%, 0 100%); }
-.hero-art { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: .65rem; background: #303036; }
-.hero-art img { width: 100%; height: auto; }
-.art-caption { position: absolute; bottom: 8%; left: 8%; display: flex; align-items: center; gap: .6rem; font-size: .69rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
-.art-caption i { width: .42rem; height: .42rem; background: var(--yellow); }
+.hero-photo img { width: 100%; height: auto; border-radius: 1.65rem .5rem 1.65rem .5rem; background: var(--panel); }
+.hero-photo figcaption { font-family: Georgia, serif; font-style: italic; font-size: .95rem; }
 
 .schedule {
   display: grid;
@@ -79,7 +78,7 @@ nav a:hover { color: var(--yellow); }
 .text-link { display: inline-flex; align-items: center; gap: .4rem; font-size: .85rem; font-weight: 720; text-underline-offset: .26em; }
 .text-link:hover { color: var(--yellow); }
 
-.online { border-block: 1px solid var(--line); background: radial-gradient(ellipse at 88% 28%, #292638, var(--panel) 60%); padding-block: clamp(3.5rem, 8vw, 6.75rem); }
+.online { border-block: 1px solid var(--line); background: radial-gradient(ellipse at 88% 28%, #423955, var(--panel) 65%); padding-block: clamp(3.5rem, 8vw, 6.75rem); }
 .online-inner { display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.2fr); align-items: center; gap: clamp(2rem, 5vw, 5rem); }
 .online h2 { margin-block: .7rem 1rem; }
 .online h2 strong { display: block; color: var(--lavender); font-weight: inherit; }
@@ -111,7 +110,7 @@ figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap
 .updates-links a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid var(--line); font-weight: 700; text-decoration: none; }
 .updates-links a:hover { color: var(--yellow); }
 .updates-links small { display: block; color: var(--muted); font-size: .74rem; font-weight: 600; }
-.site-footer { border-top: 1px solid var(--line); background: #0b0b0d; }
+.site-footer { border-top: 1px solid var(--line); background: #24222a; }
 .footer-inner { padding-block: 1.4rem; }
 .site-footer .brand small { margin-top: .2rem; text-transform: none; letter-spacing: 0; }
 
@@ -123,7 +122,6 @@ figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap
   .wrap { width: calc(100% - 2rem); }
   .hero, .online-inner, .updates { grid-template-columns: minmax(0, 1fr); }
   .hero h1 { font-size: clamp(3.3rem, 11.5vw, 6rem); }
-  .hero-art { max-width: 36rem; }
   .header-inner, .footer-inner { flex-wrap: wrap; }
   .schedule { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
   .schedule > :first-child { grid-column: 1 / -1; }
