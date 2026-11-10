@@ -26,6 +26,7 @@ h2 { font-size: clamp(2.25rem, 4.5vw, 3.8rem); line-height: 1.03; letter-spacing
 .site-header { border-bottom: 1px solid var(--line); }
 .header-inner, .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: .6rem 2rem; padding-block: 1rem; }
 .brand { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; font-size: 1rem; font-weight: 800; line-height: 1.2; }
+.brand img { border-radius: .35rem; object-fit: contain; }
 .brand small { display: block; color: var(--muted); font-size: .65rem; font-weight: 650; letter-spacing: .13em; text-transform: uppercase; }
 nav { display: flex; flex-wrap: wrap; gap: .2rem clamp(1rem, 3vw, 2.25rem); }
 nav a { padding-block: .45rem; color: var(--muted); font-size: .88rem; font-weight: 650; text-decoration: none; }
